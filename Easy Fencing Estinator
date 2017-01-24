@@ -1,0 +1,101 @@
+# DCM
+#A material list and labour cost app for quick on-sight project estimating.
+
+
+while 1:
+    area=int(input('\nenter project area in feet:'))
+    if area>=9:
+
+        top_rail=area//20
+        tr=top_rail+1
+        trV=18.50
+        trE=tr*trV
+
+        fence_post=area//50
+        fP=fence_post+2
+        fPV=10.55
+        fPE=fP*fPV
+
+        fence_poll=area//10
+        fp=fence_poll+1
+        fpV=8.50
+        fpE=fp*fpV
+        
+        fence_mesh=area//1
+        fm=fence_mesh+2
+        fmV=2.50
+        fmE=fm*fmV
+
+        tension_bar=fP
+        tb=tension_bar+1
+        tbV=5.95
+        tbE=tb*tbV
+
+        tension_band=tb*5
+        tB=tension_band+5
+        tBV=(1.95)
+        tBE=tB*tBV
+
+        post_band=fP
+        pB=post_band+1
+        pBV=(1.95)
+        pBE=pB*pBV
+
+        rail_loop=fp
+        rl=rail_loop
+        rlV=1.95
+        rlE=rl*rlV
+
+        post_cap=fP
+        pc=post_cap+1
+        pcV=1.65
+        pcE=pc*pcV
+
+        end_cap=fP
+        ec=end_cap
+        ecV=1.95
+        ecE=ec*ecV
+
+        tie_wire=area//50
+        tw=tie_wire+1
+        twV=5.95
+        twE=tw*twV
+
+        Cement=fp//10+.5
+        c=Cement
+        cV=9.50
+        cE=c*cV
+
+        Sand_Bag=c*4
+        s=Sand_Bag
+        sV=2.50
+        sE=s*sV
+
+        MC=trE+fPE+fpE+fmE+tbE+ecE+pcE+cE+sE+rlE+twE+tBE+pBE
+        LC=MC/3
+        Tax=MC/10
+       
+        print('\n..........PROJECT COST PROJECTION..............')
+        print('      ITEM                 UNIT          COST')
+        print('Top Rail                   '+str(tr)+'           $'+str(round(trE)))
+        print('Fence Post                 '+str(round(fP))+'           $'+str(fPE))
+        print('Fence Poll                 '+str(round(fp))+'           $'+str(fpE))
+        print('Fence Mesh Wire            '+str(round(fm))+'ft.        $'+str(fmE))
+        print('Tension Bar                '+str(round(tb))+'           $'+str(tbE))
+        print('Tension Band w/nut & bolt  '+str(round(tB))+'           $'+str(tBE))
+        print('Post Band    w/nut & bolt  '+str(round(pB))+'           $'+str(pBE))
+        print('Rail Loop                  '+str(round(rl))+'           $'+str(rlE))
+        print('End Cap                    '+str(round(ec))+'           $'+str(ecE))
+        print('Post Cap                   '+str(round(pc))+'           $'+str(pcE))
+        print('Tie Wire                   '+str(round(tw))+' bags      $'+str(twE))
+        print('Cement                     '+str(c        )+' bags      $'+str(cE ))
+        print('Sand                       '+str(round(s ))+' bags      $'+str(sE))
+        print('                       MATERIAL COST  $'+str(MC))
+        print('                          LABOR COST  $'+str(LC))
+        print('                         PROJECT TAX  $ '+str(round(Tax)))
+        print('                  TOTAL PROJECT COST  $'+str(round(MC+LC+Tax)))
+
+    elif area==() or area==('') or area==str():
+        print('enter a number')
+    else:
+        pass
